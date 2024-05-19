@@ -1,0 +1,260 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Define font face */
+@font-face {
+    font-family: 'Mukta-Regular';
+    src: url('Mukta-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Mukta-Regular', sans-serif;
+}
+
+
+a {
+    cursor: auto;
+}
+
+
+/* Video container styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video Background styling */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+/* Overlay box styling */
+.overlay-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 20px; /* Fixed padding */
+    border-radius: 20px; /* Fixed border-radius */
+    text-align: center;
+    max-width: 60rem; /* Fixed maximum width */
+    width: 30%; /* Fixed width */
+    max-height: 30rem; /* Fixed maximum height */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+/* Profile Picture styling */
+.profile-pic {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    border-radius: 50%; /* To make it circular */
+    align-self: center; /* Center the image horizontally */
+    margin-bottom: 10px; /* Fixed margin */
+}
+
+/* Username styling */
+h2 {
+    color: white;
+    font-size: 20px; /* Fixed font size */
+    margin-bottom: 10px; /* Fixed margin */
+    position: relative; /* Position relative for pseudo-elements */
+    display: inline-block; /* Adjust to fit the sparkles */
+    z-index: 1; /* Ensure the text is above the sparkles */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 
+                 0 0 20px rgba(255, 255, 255, 0.7), 
+                 0 0 30px rgba(255, 255, 255, 0.7); /* Static glow */
+    animation: glow 1.5s infinite alternate; /* Dynamic glow */
+}
+
+/* Inner Box styling */
+.inner-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 20px; /* Fixed padding */
+    border-radius: 20px; /* Fixed border-radius */
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Fixed margin-top */
+    max-width: 23rem; /* Fixed maximum width */
+    width: 60%; /* Full width */
+    height: auto; /* Allow height to adjust based on content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Picture with Status */
+.profile-with-status {
+    position: relative;
+    margin-right: 10px; /* Fixed margin */
+}
+
+.inner-profile-pic {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    border-radius: 50%; /* To make it circular */
+}
+
+.status-symbol {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px; /* Fixed width */
+    height: 10px; /* Fixed height */
+    margin-bottom: 5px; /* Fixed margin */
+    margin-right: 2px; /* Fixed margin */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.username-with-badges {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* Remove margin */
+    margin-top: 0; /* Remove margin */
+    justify-content: flex-start; /* Align text to the left */
+}
+
+.inner-username {
+    color: rgb(255, 255, 255);
+    font-size: 16px; /* Fixed font size */
+    margin-right: 10px; /* Fixed margin */
+    margin-top: -30px; /* Fixed margin */
+    min-width: auto;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    margin-top: -35px; /* Fixed margin-top */
+}
+
+.badges img {
+    width: 15px; /* Fixed width */
+    height: 15px; /* Fixed height */
+    margin-left: 2px; /* Fixed margin */
+    margin-top: 15px; /* Fixed margin */
+}
+
+/* Discord Status styling */
+.discord-statuss {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    text-align: left; /* Align text to the left */
+    margin-top: 0; /* Fixed margin */
+    margin-left: -45px; /* Fixed margin for preventing movement */
+}
+
+.stat {
+    width: 10px; /* Fixed width */
+    height: 10px; /* Fixed height */
+    margin-top: 13px; /* Adjusted margin */
+    margin-left: 20px; /* Fixed margin for preventing movement */
+}
+
+.status-emoji {
+    position: absolute;
+    left: auto; /* Allow the browser to determine horizontal position */
+    top: 71.5%; /* Center the emoji vertically */
+    transform: translateY(-50%); /* Adjust vertically centered position */
+    z-index: 2; /* Ensure the .status-emoji is in front of text */
+    width: 14px; /* Adjust the width as needed */
+    height: 14px; /* Adjust the height as needed */
+    margin-left: -80px;
+}
+
+
+
+.discord-statuss p {
+    color: rgb(241, 207, 207);
+    font-size: 12px; /* Fixed font size */
+    margin-top: 13px; /* Fixed margin-top */
+    margin-left: -65px; /* Fixed margin for preventing movement */
+}
+
+/* Social media links styling */
+.social-links {
+    margin-top: 10px; /* Fixed margin-top */
+    display: flex;
+    justify-content: center; /* Center the social icons horizontally */
+}
+
+.social-icon {
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    margin: 0 10px; /* Fixed margin */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Add a drop shadow */
+    animation: glow 1.5s infinite alternate; /* Apply glow animation */
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Initial glow effect */
+    }
+    100% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); /* Final glow effect */
+    }
+}
+
+/* Sparkles styling */
+.sparkles {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 7%; /* Adjust as needed to cover the area */
+    height: auto;
+    pointer-events: none; /* So it doesn't interfere with other elements */
+}
+
+.cursor {
+    pointer-events: none;
+    
+    &__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      z-index: 1000;
+      
+      circle {
+        fill: #f7f8fa;
+      }
+    }      
+}
+
+/* Additional adjustments for responsive behavior */
+@media screen and (max-width: 768px) {
+    .overlay-box {
+        max-width: 90%; /* Adjusted maximum width for smaller screens */
+        width: 90%; /* Adjusted width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+}
+
+ 
